@@ -1,0 +1,318 @@
+<!-- 
+    DOCUMENTO HTML: Página Principal de la Auditoría Superior de la Ciudad de México
+    Descripción: Portal web que presenta información sobre auditorías, programas y servicios
+    Tecnología: HTML5 + Tailwind CSS + Font Awesome Icons
+-->
+
+<!DOCTYPE html>
+<!-- Define que este es un documento HTML5 -->
+<html lang="es">
+<!-- Etiqueta raíz con idioma en español -->
+<head>
+    <!-- Sección de metadatos y configuración de la página -->
+    <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura la página para ser responsiva en dispositivos móviles -->
+    <title>Auditoría Superior de la Ciudad de México</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importa Tailwind CSS desde CDN para estilos predefinidos y utilitarios -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Importa Font Awesome para usar iconos (teléfono, redes sociales, etc.) -->
+    <style>
+        <!-- Define variables CSS personalizadas y clases adicionales para la marca -->
+        :root {
+            <!-- Variables CSS globales con colores específicos de la institución -->
+            --guinda: #611232;
+            <!-- Color guinda (morado oscuro) usado en logos y elementos principales -->
+            --dorado: #A57F2C;
+            <!-- Color dorado para bordes, botones y elementos secundarios -->
+            --gris-claro: #f4f4f4;
+            <!-- Gris claro para fondos sutiles -->
+        }
+        <!-- Clases CSS para aplicar los colores personalizados -->
+        .bg-guinda { background-color: var(--guinda); }
+        <!-- Fondo con color guinda -->
+        .text-guinda { color: var(--guinda); }
+        <!-- Texto en color guinda -->
+        .border-guinda { border-color: var(--guinda); }
+        <!-- Bordes en color guinda -->
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-800">
+<!-- Cuerpo principal: fondo blanco, fuente sans-serif, texto gris oscuro -->
+
+    <!-- ENCABEZADO: Sección superior con logos e iconos sociales -->
+    <header class="container mx-auto px-4 py-4 flex justify-between items-center border-b border-gray-100">
+        <!-- Contenedor centrado, con espaciado, elementos distribuidos horizontalmente, borde inferior gris claro -->
+        
+        <!-- SECCIÓN IZQUIERDA: Logos institucionales -->
+        <div class="flex items-center space-x-4">
+            <!-- Logos de CDMX y de Auditoría alineados horizontalmente -->
+            <img src="https://via.placeholder.com/150x50?text=CDMX+Logo" alt="Logo CDMX" class="h-12">
+            <!-- Logo de la Ciudad de México, altura de 12 unidades -->
+            <img src="https://via.placeholder.com/200x50?text=ASCM+Logo" alt="Logo Auditoria" class="h-12">
+            <!-- Logo de la Auditoría Superior, altura de 12 unidades -->
+        </div>
+        
+        <!-- SECCIÓN DERECHA: Iconos sociales y asistente -->
+        <div class="flex items-center space-x-4">
+            <!-- Iconos de redes sociales y bot alineados horizontalmente -->
+            <div class="flex space-x-2 text-guinda">
+                <!-- Iconos de redes sociales en color guinda -->
+                <i class="fab fa-twitter"></i>
+                <!-- Icono de Twitter -->
+                <i class="fab fa-facebook"></i>
+                <!-- Icono de Facebook -->
+                <i class="fab fa-youtube"></i>
+                <!-- Icono de YouTube -->
+            </div>
+            <img src="https://via.placeholder.com/40?text=Bot" alt="Bot" class="rounded-full border border-guinda">
+            <!-- Imagen redonda del asistente (botAS) con borde guinda -->
+        </div>
+    </header>
+
+
+    <!-- BARRA DE NAVEGACIÓN: Menú principal y búsqueda -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <!-- Fondo blanco, sombra sutil, se queda fija al hacer scroll, encima de otros elementos -->
+        <div class="container mx-auto px-4">
+            <!-- Contenedor centrado con espaciado lateral -->
+            <ul class="flex justify-center space-x-6 py-3 text-sm font-medium text-gray-700">
+                <!-- Lista de enlaces centrada horizontalmente, espacio entre elementos -->
+                <li class="border-b-2 border-guinda text-guinda"><a href="#">Inicio</a></li>
+                <!-- Opción "Inicio" con borde inferior en color guinda (active) -->
+                <li><a href="#">Quiénes Somos ▾</a></li>
+                <!-- Opción con desplegable (▾ indica menú desplegable) -->
+                <li><a href="#">Marco Normativo ▾</a></li>
+                <!-- Opción con desplegable para información legal y normativa -->
+                <li><a href="#">Sujetos Fiscalizables ▾</a></li>
+                <!-- Opción con desplegable para entidades auditadas -->
+                <li><a href="#">Transparencia ▾</a></li>
+                <!-- Opción con desplegable para información transparente -->
+                <li><a href="#">Buzón Ciudadano ▾</a></li>
+                <!-- Opción con desplegable para denuncias y comentarios ciudadanos -->
+                <li><i class="fas fa-search"></i></li>
+                <!-- Icono de búsqueda al final del menú -->
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- SECCIÓN HÉROE: Banner principal con título y tres tarjetas destacadas -->
+    <section class="relative bg-guinda text-white py-16 text-center overflow-hidden">
+        <!-- Fondo guinda, texto blanco, espaciado vertical, texto centrado, oculta desbordamientos -->
+        <div class="absolute inset-0 opacity-20 bg-[url('https://via.placeholder.com/1200x400')] bg-cover"></div>
+        <!-- Imagen de fondo decorativa con opacidad baja, cubre todo el área -->
+        
+        <div class="relative z-10 container mx-auto px-4">
+            <!-- Contenedor con z-index para estar encima de la imagen de fondo -->
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Auditoría Superior de la Ciudad de México:<br>Tu aliado en la rendición de cuentas.</h1>
+            <!-- Título principal: tamaño responsive (3xl en móvil, 4xl en desktop), negrita, salto de línea -->
+            
+            <p class="text-lg mb-8">Descubre los resultados de nuestra labor fiscalizadora y accede a información transparente.</p>
+            <!-- Subtítulo descriptivo, tamaño grande, con margen inferior -->
+            
+            <!-- TARJETAS DE CONTENIDO: Tres bloques destacados con programas e iniciativas -->
+            <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Grid responsive: 1 columna en móvil, 3 columnas en desktop, espaciado entre tarjetas -->
+                
+                <!-- TARJETA 1: Programa Cero Recomendaciones -->
+                <div class="bg-white rounded-lg p-6 shadow-xl text-gray-800">
+                    <!-- Tarjeta: fondo blanco, bordes redondeados, sombra profunda, texto oscuro -->
+                    <h3 class="font-bold text-lg mb-2 uppercase">Programa Cero Recomendaciones</h3>
+                    <!-- Título de la tarjeta en mayúsculas, negrita -->
+                    <img src="https://via.placeholder.com/200x120" class="mx-auto mb-4 rounded" alt="Gráfica">
+                    <!-- Imagen placeholder de gráfica, centrada, con espacio inferior -->
+                    <p class="text-xs mb-4">Promoviendo la excelencia administrativa en las entidades de CDMX.</p>
+                    <!-- Descripción pequeña del programa -->
+                    <button class="bg-guinda text-white px-6 py-2 rounded-full text-sm">Ver Resultados</button>
+                    <!-- Botón con fondo guinda, texto blanco, bordes redondeados (pill shape) -->
+                </div>
+                
+                <!-- TARJETA 2: Atlas de la Fiscalización (destacada) -->
+                <div class="bg-white rounded-lg p-6 shadow-xl text-gray-800 border-2 border-green-700">
+                    <!-- Tarjeta con borde verde oscuro para diferenciarla/destacarla -->
+                    <h3 class="font-bold text-lg mb-2 uppercase">Atlas de la Fiscalización</h3>
+                    <!-- Título destacado -->
+                    <img src="https://via.placeholder.com/200x120" class="mx-auto mb-4 rounded" alt="Mapa">
+                    <!-- Imagen placeholder de mapa interactivo -->
+                    <p class="text-xs mb-4">Conoce el estado y ubicación de todas las auditorías practicadas.</p>
+                    <!-- Descripción del atlas -->
+                    <button class="bg-green-800 text-white px-6 py-2 rounded-full text-sm">Consultar Mapa</button>
+                    <!-- Botón con fondo verde para mantener coherencia con el borde -->
+                </div>
+                
+                <!-- TARJETA 3: botAS - Asistente Virtual -->
+                <div class="bg-white rounded-lg p-6 shadow-xl text-gray-800">
+                    <!-- Tarjeta para presentar el chatbot de IA -->
+                    <h3 class="font-bold text-lg mb-2 uppercase">botAS: Tu Asistente Virtual</h3>
+                    <!-- Nombre y descripción del asistente -->
+                    <img src="https://via.placeholder.com/100x100" class="mx-auto mb-4 rounded-full" alt="Bot">
+                    <!-- Imagen del bot, formato circular -->
+                    <p class="text-xs mb-4">Asistencia por navegar la información de transparencia y resolver tus dudas.</p>
+                    <!-- Descripción de funcionalidades del bot -->
+                    <button class="bg-guinda text-white px-6 py-2 rounded-full text-sm">Hablar con botAS</button>
+                    <!-- Botón para iniciar chat con el bot -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN DE ACTIVIDADES: Galería de noticias e información destacada -->
+    <section class="py-10 bg-gray-50">
+        <!-- Fondo gris claro, espaciado vertical -->
+        <h2 class="text-center text-xl font-bold text-gray-600 mb-8">Actividades de la Auditoría Superior de la Ciudad de México</h2>
+        <!-- Título centrado de la sección: grande, negrita, color gris, con margen inferior -->
+        
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Grid responsive: 1 imagen en móvil, 3 imágenes en desktop, espacio pequeño entre ellas -->
+            <img src="https://via.placeholder.com/400x200?text=Noticia+1" class="rounded shadow w-full">
+            <!-- Primera noticia/imagen: placeholder, bordes redondeados, sombra, ancho completo -->
+            <img src="https://via.placeholder.com/400x200?text=Noticia+2" class="rounded shadow w-full">
+            <!-- Segunda noticia/imagen -->
+            <img src="https://via.placeholder.com/400x200?text=Noticia+3" class="rounded shadow w-full">
+            <!-- Tercera noticia/imagen -->
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN DE OPCIONES RÁPIDAS: Acceso directo a servicios principales -->
+    <section class="py-12 bg-[#F9F3E9] bg-[url('https://via.placeholder.com/1200x600?text=Palacio+Fondo')] bg-no-repeat bg-bottom bg-contain">
+        <!-- Fondo color crema con imagen de palacio de fondo en la parte inferior -->
+        <div class="container mx-auto px-4">
+            <!-- Contenedor centrado con espaciado lateral -->
+            
+            <!-- GRID DE ICONOS: 6 opciones en 2 columnas (móvil) o 6 columnas (desktop) -->
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
+                <!-- Grid responsivo para mostrar opciones rápidas -->
+                
+                <!-- OPCIÓN 1: Contacto -->
+                <div class="flex flex-col items-center">
+                    <!-- Contenedor con icono y etiqueta centrados -->
+                    <div class="w-24 h-24 bg-[#E8D5B7] border-2 border-[#A57F2C] rounded-2xl flex items-center justify-center mb-2 shadow-md">
+                        <!-- Caja cuadrada con icono: fondo beige, borde dorado, bordes muy redondeados -->
+                        <i class="fas fa-phone-alt text-3xl text-guinda"></i>
+                        <!-- Icono de teléfono en color guinda -->
+                    </div>
+                    <span class="text-xs font-bold uppercase">Contacto</span>
+                    <!-- Etiqueta pequeña en mayúsculas -->
+                </div>
+                
+                <!-- OPCIÓN 2: Datos Personales -->
+                <div class="flex flex-col items-center">
+                    <!-- Contenedor centrado -->
+                    <div class="w-24 h-24 bg-[#E8D5B7] border-2 border-[#A57F2C] rounded-2xl flex items-center justify-center mb-2 shadow-md">
+                        <!-- Caja con estilo consistente -->
+                        <i class="fas fa-fingerprint text-3xl text-guinda"></i>
+                        <!-- Icono de huella dactilar (privacidad/datos personales) -->
+                    </div>
+                    <span class="text-xs font-bold uppercase">Datos Personales</span>
+                    <!-- Etiqueta -->
+                </div>
+                
+                <!-- OPCIÓN 3: Licitaciones -->
+                <div class="flex flex-col items-center">
+                    <!-- Contenedor centrado -->
+                    <div class="w-24 h-24 bg-[#E8D5B7] border-2 border-[#A57F2C] rounded-2xl flex items-center justify-center mb-2 shadow-md">
+                        <!-- Caja con estilo consistente -->
+                        <i class="fas fa-gavel text-3xl text-guinda"></i>
+                        <!-- Icono de mazo (legal/licitaciones) -->
+                    </div>
+                    <span class="text-xs font-bold uppercase">Licitaciones</span>
+                    <!-- Etiqueta -->
+                </div>
+                
+                <!-- OPCIÓN 4: Carrito -->
+                <div class="flex flex-col items-center">
+                    <!-- Contenedor centrado -->
+                    <div class="w-24 h-24 bg-[#E8D5B7] border-2 border-[#A57F2C] rounded-2xl flex items-center justify-center mb-2 shadow-md">
+                        <!-- Caja con estilo consistente -->
+                        <i class="fas fa-shopping-cart text-3xl text-guinda"></i>
+                        <!-- Icono de carrito de compras -->
+                    </div>
+                    <span class="text-xs font-bold uppercase">Carrito</span>
+                    <!-- Etiqueta -->
+                </div>
+                
+                <!-- OPCIÓN 5: Sitios de Interés -->
+                <div class="flex flex-col items-center">
+                    <!-- Contenedor centrado -->
+                    <div class="w-24 h-24 bg-[#E8D5B7] border-2 border-[#A57F2C] rounded-2xl flex items-center justify-center mb-2 shadow-md">
+                        <!-- Caja con estilo consistente -->
+                        <i class="fas fa-globe text-3xl text-guinda"></i>
+                        <!-- Icono de globo terrestre (sitios web) -->
+                    </div>
+                    <span class="text-xs font-bold uppercase">Sitios de Interés</span>
+                    <!-- Etiqueta -->
+                </div>
+                
+                <!-- OPCIÓN 6: Información Contable -->
+                <div class="flex flex-col items-center">
+                    <!-- Contenedor centrado -->
+                    <div class="w-24 h-24 bg-[#E8D5B7] border-2 border-[#A57F2C] rounded-2xl flex items-center justify-center mb-2 shadow-md">
+                        <!-- Caja con estilo consistente -->
+                        <i class="fas fa-file-invoice text-3xl text-guinda"></i>
+                        <!-- Icono de documento/factura (información financiera) -->
+                    </div>
+                    <span class="text-xs font-bold uppercase text-[10px]">Información Contable</span>
+                    <!-- Etiqueta con tamaño aún más pequeño para caber en el espacio -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PIE DE PÁGINA (FOOTER): Información de contacto y enlaces legales -->
+    <footer class="bg-[#A57F2C] text-white py-6">
+        <!-- Fondo dorado, texto blanco, espaciado vertical pequeño -->
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-xs">
+            <!-- Contenedor con distribución responsive: columnas en móvil, filas en desktop -->
+            
+            <!-- SECCIÓN IZQUIERDA: Información de contacto institucional -->
+            <div class="text-center md:text-left mb-4 md:mb-0">
+                <!-- Texto centrado en móvil, alineado a la izquierda en desktop -->
+                <p>ASCM. Adentora Surerior Palestra 312, Ciudad de México</p>
+                <!-- Línea con dirección de la institución -->
+                <p>Teléfono: (91) 223-3229</p>
+                <!-- Línea con número de teléfono -->
+            </div>
+            
+            <!-- SECCIÓN CENTRAL: Enlaces a políticas y marcos legales -->
+            <div class="flex space-x-6">
+                <!-- Enlaces horizontales con espacio entre ellos -->
+                <a href="#" class="hover:underline">Aviso de Privacidad</a>
+                <!-- Enlace a política de privacidad -->
+                <a href="#" class="hover:underline">Marco Legal</a>
+                <!-- Enlace a información legal -->
+            </div>
+            
+            <!-- SECCIÓN DERECHA: Logo complementario -->
+            <div class="mt-4 md:mt-0">
+                <!-- Margen superior en móvil, sin margen en desktop -->
+                <img src="https://via.placeholder.com/80x40?text=CDMX" alt="CDMX Logo Blanco">
+                <!-- Logo de CDMX en blanco -->
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- BOTÓN FLOTANTE: Asistente virtual (botAS) siempre visible -->
+    <div class="fixed bottom-10 right-10 z-[100] text-center">
+        <!-- Posicionado fijo en la esquina inferior derecha, encima de otros elementos -->
+        <img src="https://via.placeholder.com/60?text=botAS" class="w-16 h-16 rounded-full border-4 border-guinda shadow-2xl">
+        <!-- Imagen circular del bot con borde guinda y sombra profunda -->
+        
+        <div class="bg-guinda text-white text-[10px] px-2 py-1 rounded mt-1 shadow">
+            <!-- Etiqueta bajo el bot: fondo guinda, texto blanco y muy pequeño, con sombra -->
+            botAS<br>ASISTENTE VIRTUAL
+            <!-- Nombre y descripción del asistente -->
+        </div>
+    </div>
+
+</body>
+<!-- Cierre del cuerpo del documento HTML -->
+</html>
+<!-- Cierre de la etiqueta HTML -->
